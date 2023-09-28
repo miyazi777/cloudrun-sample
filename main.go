@@ -15,7 +15,7 @@ type Hello struct {
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(Hello{Title: "Hello", Desc: "World", Ver: "0.0.1"})
+		json.NewEncoder(w).Encode(Hello{Title: "Hello", Desc: "World", Ver: "0.0.2"})
 	})
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
